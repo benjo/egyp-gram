@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <title>Grammaire Égyptienne</title>
+    <title>𓄿 Grammaire Égyptienne [1ère année]</title>
+    <link rel="icon" type="image/png"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
     <style>
         :root {
             --cadrat-size: 20px;
@@ -12,20 +14,37 @@
             --small-font-size: 14px;
         }
 
-        @media (max-width: 600px) {
-            :root {
-                --cadrat-size: 20px;
-                --font-size: 28px;
+        .print-only {
+            display: none;
+        }
 
+        @media print {
+            .page-break {
+                display: block;
+                page-break-before: always;
+                break-before: page;
+            }
+
+            .print-only {
+                display: block;
             }
         }
 
+        @font-face {
+            font-family: 'Noto Sans Egyptian Hieroglyphs';
+            src: url('fonts/NotoSansEgyptianHieroglyphs-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         body {
-            font-family: "Gill Sans MT", "Gill Sans", "Calibri", "Sans Serif";
+            margin-left: 1%;
+            font-family: "Gill Sans MT", "Gill Sans", "Roboto", "Times New Roman";
         }
 
         .tra {
-            font-family: "Trismegistos", "Junicode", "Gentium Plus", "Times New Roman";
+            font-family: "Junicode", "Gentium Plus", "Times New Roman";
             font-style: italic;
         }
 
@@ -43,6 +62,7 @@
             align-items: center;
             width: var(--cadrat-size);
             height: var(--cadrat-size);
+            font-family: 'Noto Sans Egyptian Hieroglyphs';
         }
 
         .seul {
@@ -51,6 +71,7 @@
             align-items: center;
             height: 200%;
             width: 50%;
+            font-family: 'Noto Sans Egyptian Hieroglyphs';
         }
 
         .pile {
@@ -65,6 +86,7 @@
         .pile span {
             font-size: var(--small-font-size);
             text-align: center;
+
         }
 
         .bul {
@@ -75,11 +97,12 @@
 
         .p1 {
             line-height: 35%;
+            font-family: 'Noto Sans Egyptian Hieroglyphs';
         }
 
         .node-rect {
-            fill: #f9f9f9;
-            stroke: #999;
+            fill: #F9F9F9;
+            stroke: #999999;
             stroke-width: 1;
         }
 
@@ -103,7 +126,7 @@
 
         .link {
             fill: none;
-            stroke: #999;
+            stroke: #999999;
             stroke-width: 1;
         }
 
@@ -115,14 +138,11 @@
 </head>
 
 <body>
-
-    <font color="4169E1">
-        <font size="4pt"></font><B>GRAMMAIRE DE L'ÉGYPTIEN HIÉROGLYPHIQUE</B>
+    <br>
+    <font color="4169E1"><B>GRAMMAIRE DE L'ÉGYPTIEN HIÉROGLYPHIQUE</B>
     </font><BR>
     Résumé de notes prises lors du cours de première année<BR>
-    <font size="2pt">
-        <font color="b6b5b0">24.02.2026<BR>mailto: benja dot michel at gmail dot com</font>
-    </font>
+    <font color="B6B5B0" size="2pt">24.02.2026<BR>mailto: benja dot michel at gmail dot com</font>
     <BR><BR><BR>
 
 
@@ -134,14 +154,18 @@
         <li><span class="tra">sn nfr</span> : un / le frère parfait :
             <font size="5pt">
                 <div style="display: inline-flex; vertical-align: middle; line-height: 1;">
-                    <span style="font-family: 'Noto Sans Egyptian Hieroglyphs'">𓌢𓄤</span>
+                    <span style="font-family: 'Noto Sans Egyptian Hieroglyphs'">
+                        𓌢𓄤
+                    </span>
                 </div>
             </font>
         </li><BR>
         <li><span class="tra">sn.w nfr.w</span> : des / les frères parfaits :
             <font size="5pt">
                 <div style="display: inline-flex; vertical-align: middle; line-height: 1;">
-                    <span style="font-family: 'Noto Sans Egyptian Hieroglyphs'">𓌢𓌢𓌢𓄤𓄤𓄤</span>
+                    <span style="font-family: 'Noto Sans Egyptian Hieroglyphs'">
+                        𓌢𓌢𓌢𓄤𓄤𓄤
+                    </span>
                 </div>
             </font>
         </li><BR>
@@ -164,7 +188,6 @@
                     <div class="cadrat">
                         <span class="seul">𓄤</span>
                     </div>
-
                     <div class="cadrat">
                         <div class="pile">
                             <span>
@@ -200,7 +223,7 @@
                         </div>
                     </div>
         </li> <BR>
-        <li><span class="tra">bȝkty n(y)t(y) sš</span> : les deux servantes du scribe <font color="b6b5b0">[duel]</font>
+        <li><span class="tra">bȝkty n(y)t(y) sš</span> : les deux servantes du scribe <font color="B6B5B0">[duel]</font>
         </li>
     </ul>
     </ul>
@@ -209,7 +232,7 @@
 
     <font color="4169E1"><B>L'ADJECTIF DISTRIBUTIF</B></font><BR><BR>
     Se place toujours <B>devant</B> les autres adjectifs et s'accorde. <span class="tra"><BR>nb </span> : chaque, tout :
-    𓎟
+    <span style="font-family: 'Noto Sans Egyptian Hieroglyphs'">𓎟</span>
     <ul>
         <li><span class="tra">nṯr.wt <B>nb</B>.wt nfr.wt</span> : toutes les bonnes déesses</li><BR>
         <li><span class="tra">nṯr.w nb.w ny(w) ȝbḏw</span> : tous les dieux maîtres d'Abydos</li><BR>
@@ -217,13 +240,16 @@
     </ul>
 
 
-
+    <div class="page-break"></div>
+    <div class="print-only">
+        <BR>
+    </div>
     <font color="4169E1"><B>L'ADJECTIF DÉMONSTRATIF</B></font><BR><BR>
     Se place toujours <B>devant</B> les autres adjectifs
     ⇒ Démonstratif et distributif ne sont <B>jamais</B> présents simultanément.<BR>
     <ul>
         <li>Proche<span class="tra"> “-n” [pn | tn | jpn | jptn] : nṯr.t <B>tn</B> nfr.t</span> : cette bonne déesse-ci
-            <font color="b6b5b0">[ms | fs | mp | fp]</font><BR><BR>
+            <font color="B6B5B0">[ms | fs | mp | fp]</font><BR><BR>
             <blockquote>
                 <span class="bul">
                     <div class="phrase">
@@ -235,7 +261,7 @@
                         </div>
                     </div>
                 </span>
-                <font color="b6b5b0">|</font>
+                <font color="B6B5B0">|</font>
                 <span class="bul">
                     <div class="phrase">
                         <div class="cadrat">
@@ -246,7 +272,7 @@
                         </div>
                     </div>
                 </span>
-                <font color="b6b5b0">|</font>
+                <font color="B6B5B0">|</font>
                 <span class="bul">
                     <div class="phrase">
                         <div class="cadrat">
@@ -260,7 +286,7 @@
                         </div>
                     </div>
                 </span>
-                <font color="b6b5b0">|</font>
+                <font color="B6B5B0">|</font>
                 <span class="bul">
                     <div class="phrase">
                         <div class="cadrat">
@@ -289,8 +315,8 @@
 
     <font color="4169E1"><B>« CECI / ÇA / CELA »</B></font><BR>
     <ul>
-        <li>Proche<span class="tra"> “-n” : <B>nn</B> n(y) bȝk.w</span> : ces serviteurs-ci <font color="b6b5b0">
-                <BR>/ <span class="tra"> bȝk.w jpn</span> [A.E.]</span>
+        <li>Proche<span class="tra"> “-n” : <B>nn</B> n(y) bȝk.w</span> : ces serviteurs-ci <font color="B6B5B0">
+                <BR>/ <span class="tra"> bȝk.w jpn</span> [Ancien Empire]</span>
             </font><BR><BR>
             <blockquote>
                 <blockquote><span class="bul">
@@ -310,7 +336,7 @@
                     </span></blockquote>
             </blockquote>
         </li><BR><BR>
-        <li>Médian<span class="tra"> “-w” : <B>nw</B> n(y) bȝk.w</span> : ces serviteurs-ci <font color="b6b5b0">
+        <li>Médian<span class="tra"> “-w” : <B>nw</B> n(y) bȝk.w</span> : ces serviteurs-ci <font color="B6B5B0">
                 <BR>/ <span class="tra"> bȝk.w jpw</span> [A.E.]</span>
             </font><BR><BR>
             <blockquote>
@@ -318,9 +344,15 @@
                         <div class="phrase">
                             <div class="cadrat">
                                 <div class="pile">
-                                    <span><sub>𓈖</sub></span>
-                                    <span>𓍉</span>
-                                    <span><sup>𓏌</sup></span>
+                                    <span><sub>
+                                            <font size=3>𓈖</font>
+                                        </sub></span>
+                                    <span><span>
+                                            <font size=4>𓍉</font>
+                                        </span>
+                                        <span><sup>
+                                                <font size=4>𓏌</font>
+                                            </sup></span>
                                 </div>
                             </div>
                             <div class="cadrat">
@@ -331,7 +363,7 @@
                     </span></blockquote>
                 <blockquote>
         </li><BR><BR>
-        <li>Lointain<span class="tra"> “-fȝ” : <B>nfȝ</B> n(y) bȝk.w</span> : ces serviteurs-là <font color="b6b5b0">
+        <li>Lointain<span class="tra"> “-fȝ” : <B>nfȝ</B> n(y) bȝk.w</span> : ces serviteurs-là <font color="B6B5B0">
                 <BR>/ <span class="tra"> bȝk.w jpfȝ</span> [A.E.]</span>
             </font><BR><BR>
             <blockquote>
@@ -339,8 +371,12 @@
                         <div class="phrase">
                             <div class="cadrat">
                                 <div class="pile">
-                                    <span>𓈖</span>
-                                    <span>𓆑</span>
+                                    <span>
+                                        <font size=4>𓈖</font>
+                                    </span>
+                                    <span>
+                                        <font size=4>𓆑</font>
+                                    </span>
                                 </div>
                             </div>
                             <div class="cadrat">
@@ -377,17 +413,20 @@
     </ul>
 
 
-
+    <div class="page-break"></div>
+    <div class="print-only">
+        <BR>
+    </div>
     <font color="4169E1"><B>L'ARTICLE DÉFINI</B>
     </font><BR>
     <ul>
         <li><span class="tra"><B>pȝ</B> bȝk</span> : ce / le serviteur</li><BR>
         <li><span class="tra"><B>tȝ</B> bȝk.t</span> : cette / la servante</li><BR>
-        <li><span class="tra"><B>nȝ</B> n(y) bȝk.w</span> : ces / les serviteurs <font color="b6b5b0">[génitif sans
+        <li><span class="tra"><B>nȝ</B> n(y) bȝk.w</span> : ces / les serviteurs <font color="B6B5B0">[génitif sans
                 accord]
             </font>
         </li><BR>
-        <li><span class="tra"><B>nȝ</B> n(y) bȝk.wt</span> : ces / les servantes <font color="b6b5b0">[idem]</font>
+        <li><span class="tra"><B>nȝ</B> n(y) bȝk.wt</span> : ces / les servantes <font color="B6B5B0">[idem]</font>
         </li><BR>
     </ul>
 
@@ -395,36 +434,37 @@
 
     <font color="4169E1"><B>LE POSSESSIF</B></font><BR>
     <ul>
-        <li><span class="tra"><B>pȝy</B>=j nb</span> : mon maître <font color="b6b5b0">[« le mien de maître »]
+        <li><span class="tra"><B>pȝy</B>=j nb</span> : mon maître <font color="B6B5B0">[« le mien de maître »]
                 [m=f]</font>
         </li><BR>
         <li><span class="tra"><B>tȝy</B>=j nb.t</span> : ma maîtresse
         </li><BR>
         <li><span class="tra"><B>nȝy</B>=j n(y) nb.w</span> : mes maîtres
         </li><BR>
+
     </ul>
 
 
 
     <font color="4169E1"><B>LES PRONOMS SUFFIXES</B></font><BR>
     <ul>
-        <li><span class="tra">nb.t=<B>j</B></span> : ma maîtresse <font color="b6b5b0">[« la maîtresse de moi »]
+        <li><span class="tra">nb.t=<B>j</B></span> : ma maîtresse <font color="B6B5B0">[« la maîtresse de moi »]
                 [m=f]</font>
         </li><BR>
-        <li><span class="tra">nb.t=<B>k</B> / nb.t=<B>ṯ</B></span> : ta maîtresse <font color="b6b5b0"> [m / f]
+        <li><span class="tra">nb.t=<B>k</B> / nb.t=<B>ṯ</B></span> : ta maîtresse <font color="B6B5B0"> [m / f]
             </font>
         </li><BR>
-        <li><span class="tra">nb.t=<B>f</B> / nb.t=<B>s</B></span> : sa maîtresse <font color="b6b5b0"> [m / f]
+        <li><span class="tra">nb.t=<B>f</B> / nb.t=<B>s</B></span> : sa maîtresse <font color="B6B5B0"> [m / f]
             </font>
         </li><BR>
-        <li><span class="tra">nb.t=<B>n</B></span> : notre maîtresse<font color="b6b5b0"> [m=f] [duel : <span
+        <li><span class="tra">nb.t=<B>n</B></span> : notre maîtresse<font color="B6B5B0"> [m=f ; duel : <span
                     class="tra">nb=ny</span>]</font>
         </li><BR>
-        <li><span class="tra">nb.t=<B>ṯn</B></span> : votre maîtresse<font color="b6b5b0"> [m=f] [duel : <span
+        <li><span class="tra">nb.t=<B>ṯn</B></span> : votre maîtresse<font color="B6B5B0"> [m=f ; duel : <span
                     class="tra">nb=ṯny</span>]
             </font>
         </li><BR>
-        <li><span class="tra">nb.t=<B>sn</B></span> : leur maîtresse<font color="b6b5b0"> [m=f] [duel : <span
+        <li><span class="tra">nb.t=<B>sn</B></span> : leur maîtresse<font color="B6B5B0"> [m=f ; duel : <span
                     class="tra">nb=sny</span>]
             </font>
         </li><BR>
@@ -433,31 +473,38 @@
 
 
     <font color="4169E1"><B>L'INDICATEUR D'ÉNONCIATION</B></font><BR><BR>
-    En début de phrase; indicatif; non exclamatif; dans le temps du contexte.<BR>
+    En début de phrase; indicatif; non exclamatif; dans le temps du contexte, invariable.<BR>
     <ul>
         <li><span class="tra"><B>jw</B></span> :
             <font size="5pt">
                 <div style="display: inline-flex; vertical-align: middle; line-height: 1;">
-                    <span style="font-family: 'Noto Sans Egyptian Hieroglyphs'">𓇋𓅱</span>
+                    <span style="font-family: 'Noto Sans Egyptian Hieroglyphs'">
+                        𓇋𓅱
+                    </span>
                 </div>
             </font>
-            <font color="b6b5b0">[invariable]</font><BR><BR>
+            <BR><BR>
         </li>
         <li><span class="tra">jw bȝk jm</span> : le serviteur est là</li><BR>
         <li><span class="tra">jw dp.t n bȝk</span> : la barque est au serviteur</li><BR>
         <li><span class="tra">jw=ṯn r-gs nb=ṯn</span> : vous êtes à côté de votre maître</li>
     </ul><BR>
+    <div class="page-break"></div>
+    <div class="print-only"></div>
+    <BR>
     On emploie l'auxiliaire <span class="tra"> wnn </span> (« exister ») pour le passé et le futur :<BR>
     <span class="p1">
-        <blockquote>𓃹<BR>
-            𓈖<BR>
-            𓈖<BR></blockquote>
+        <blockquote>
+            <font size="4">𓃹</font><BR>
+            <font size="5">𓈖</font><BR>
+            <font size="5">𓈖</font><BR>
+        </blockquote>
     </span>
 
     <ul>
         <li><span class="tra">wn=f m pr</span> : il était dans la maison</li><BR>
         <li><span class="tra">wnn=f m pr</span> : il sera dans la maison</li><BR>
-        <li><span class="tra">wnn=f m bȝk</span> : il sera serviteur <font color="b6b5b0">[<span class="tra">m</span> :
+        <li><span class="tra">wnn=f m bȝk</span> : il sera serviteur <font color="B6B5B0">[<span class="tra">m</span> :
                 dans la situation de]
             </font>
         </li>
@@ -468,7 +515,7 @@
 
     <font color="4169E1"><B>L'ALLATIF</B></font><BR>
     <ul>
-        <li><span class="tra">jw=f <B>r</B> pr</span> : il va à la maison <font color="b6b5b0">[<span
+        <li><span class="tra">jw=f <B>r</B> pr</span> : il va à la maison <font color="B6B5B0">[<span
                     class="tra">r</span> : en direction de]
             </font>
         </li><BR>
@@ -486,11 +533,12 @@
     <font color="4169E1"><B>LES PARTICULES PROCLITIQUES & LES PRONOMS DÉPENDANTS</B></font><BR><BR>
     Éléments mis en <B>première position</B> dans les phrases, donnant des infos sur la narration.<BR>
     <ul>
-        <li><span class="tra">mk <font color="b6b5b0">(/ mṯ)</font> bȝk m njw.t !</span> : vois, le serviteur est dans
+        <li><span class="tra">mk <font color="B6B5B0">(/ mṯ)</font> bȝk m njw.t !</span> : vois, le serviteur est
+            dans
             la ville !</li>
         <BR>
         <li><span class="tra">mṯn bȝk m njw.t !</span> : voyez, le serviteur est dans la ville ! </li><BR>
-        <li><span class="tra">ḥȝ <font color="b6b5b0">(/ ḥw / ḥwȝ)</font> bȝk m njw.t !</span> : ah, si le serviteur
+        <li><span class="tra">ḥȝ <font color="B6B5B0">(/ ḥw / ḥwȝ)</font> bȝk m njw.t !</span> : ah, si le serviteur
             était dans la ville ! </li><BR>
     </ul>
     Pour un ton plus fort :<BR>
@@ -500,22 +548,26 @@
     Derrière une particule proclitique on utilise un <B>pronom dépendant</B>.<BR>
     <ul>
         <li><span class="tra">mṯn <B>wj</B> m pr !</span> : voyez, je suis dans la maison !</li><BR>
-        <li><span class="tra">jsṯ <font color="b6b5b0">(/ sṯ / jsk / sk / tj)</font> <B>ṯw / ṯn</B> m dp.t</span>
+        <li><span class="tra">jsṯ <font color="B6B5B0">(/ sṯ / jsk / sk / tj)</font> <B>ṯw / ṯn</B> m dp.t</span>
             : or, tu es dans la
             barque
-            <font color="b6b5b0"> [m / f]</font>
+            <font color="B6B5B0"> [m / f]</font>
         </li><BR>
         <li><span class="tra">mṯn <B>sw / s.y</B>
-                <font color="b6b5b0">(/ s(.y) / s.t )</font>
+                <font color="B6B5B0">(/ s(.y) / s.t )</font>
                 </font> m njw.t !
             </span> : voyez, il / elle est dans la ville !</li><BR>
         <li><span class="tra">mṯn <B>n</B> m pr !</span> : voyez, nous sommes dans la maison !</li><BR>
         <li><span class="tra">jsṯ <B>ṯn</B> m njw.t</span> : or, vous êtes dans la ville</li><BR>
-        <li><span class="tra">nḥmn <B>sn</B> m p.t !</span> : assurément, ils/elles sont dans le ciel ! <font
-                color="b6b5b0">[m=f]
+        <li><span class="tra">nḥmn <B>sn</B> m p.t !</span> : assurément, ils / elles sont dans le ciel ! <font
+                color="B6B5B0">[m=f]
             </font>
         </li>
     </ul>
+    <div class="page-break"></div>
+    <div class="print-only">
+        <BR>
+    </div>
     <BR>
 
 
@@ -523,7 +575,8 @@
     <font color="4169E1"><B>L'ELLIPSE PARTIELLE DU PRÉDICAT</B></font><BR><BR>
     La règle de « sa tête est un âne », pour exprimer « sa tête est celle d'un âne ».
     <ul>
-        <li><span class="tra">jw ˁ=f m Stẖ</span> : son bras est celui de Seth <font color="b6b5b0">[« son bras en tant
+        <li><span class="tra">jw ˁ=f m Stẖ</span> : son bras est celui de Seth <font color="B6B5B0">[« son bras en
+                tant
                 que (<span class="tra">m</span>) Seth »]
             </font>
         </li>
@@ -547,20 +600,25 @@
     <span class="tra">pw</span> induit toujours une proposition nominale.
     <ul>
 
-        <li><span class="tra">jw sȝ=j m sš</span> : mon fils est scribe <font color="b6b5b0">[situation]</font><BR><BR>
+        <li><span class="tra">jw sȝ=j m sš</span> : mon fils est scribe <font color="B6B5B0">[situation]</font>
+            <BR><BR>
         </li>
-        <li><span class="tra">sš pw sȝ=j</span> : mon fils est scribe <font color="b6b5b0">[par nature]</font><BR><BR>
+        <li><span class="tra">sš pw sȝ=j</span> : mon fils est scribe <font color="B6B5B0">[par nature]</font>
+            <BR><BR>
         </li>
-        <li><span class="tra">sš pw</span> : c'est un scribe <font color="b6b5b0">[par nature]</font><BR><BR>
+        <li><span class="tra">sš pw</span> : c'est un scribe <font color="B6B5B0">[par nature]</font><BR><BR>
         </li>
     </ul>
-    Thématisation, renforcement avec <span class="tra">jr</span> : 𓇋<sup> 𓂋</sup><BR><BR>
+    Thématisation, renforcement avec <span class="tra">jr</span> : <span
+        style="font-family: 'Noto Sans Egyptian Hieroglyphs'">
+        <font size="5">𓇋<sup> 𓂋</sup></font>
+    </span><BR><BR>
     <ul>
-        <li><span class="tra"><B>jr</B> sȝ=j jw=f m sš</span> : quant à mon fils, il est scribe <font color="b6b5b0">
+        <li><span class="tra"><B>jr</B> sȝ=j jw=f m sš</span> : quant à mon fils, il est scribe <font color="B6B5B0">
                 [situation]</font><BR><BR>
-        <li><span class="tra">jr sȝ=j sš pw</span> : quant à mon fils, il est scribe <font color="b6b5b0">
+        <li><span class="tra">jr sȝ=j sš pw</span> : quant à mon fils, il est scribe <font color="B6B5B0">
                 [par nature]</font><BR><BR>
-        <li><span class="tra">sȝ=j, sš !</span> : mon fils, il est scribe ! <font color="b6b5b0"></font><BR><BR>
+        <li><span class="tra">sȝ=j, sš !</span> : mon fils, il est scribe ! <font color="B6B5B0"></font><BR><BR>
         </li>
         <li><span class="tra">ḥm.t pw nfr.t n(y).t sš sȝ=j</span> : ma fille est une belle épouse de scribe</li><BR>
     </ul>
@@ -571,30 +629,36 @@
     <font color="4169E1"><B>LA NÉGATION DE LA PROPOSITION À PRÉDICAT NOMINAL</B></font><BR><BR>
     Avec <span class="tra">n</span> et <span class="tra">js</span> :
     <ul>
-        <li><span class="tra"><B>n <font color="b6b5b0">(/ nn)</font></B> bȝk <B>js</B> pw</span> : ce n'est pas un
+        <li><span class="tra"><B>n <font color="B6B5B0">(/ nn)</font></B> bȝk <B>js</B> pw</span> : ce n'est pas un
             serviteur</li><BR>
     </ul>
 
 
-
+    <div class="page-break"></div>
+    <div class="print-only">
+        <BR>
+    </div>
     <font color="4169E1"><B>LES PRONOMS INDÉPENDANTS</B></font>
     <BR>
 
     <ul>
         <li><span class="tra"><B>jnk</B> bȝk</span> : moi, je suis un serviteur
         </li><BR>
-        <li><span class="tra"><B>ntk / ntṯ <font color="b6b5b0">(/ ntt)</font></B> bȝk / bȝk.t</span> : toi, tu es un
+        <li><span class="tra"><B>ntk / ntṯ <font color="B6B5B0">(/ ntt)</font></B> bȝk / bȝk.t</span> : toi, tu es
+            un
             serviteur / une servante</li><BR>
-        <li><span class="tra"><B>ntf / nts </B> bȝk / bȝk.t</span> : lui, c'est un serviteur / elle, c'est une servante
+        <li><span class="tra"><B>ntf / nts </B> bȝk / bȝk.t</span> : lui, c'est un serviteur / elle, c'est une
+            servante
         </li><BR>
         <li><span class="tra"><B>jnn </B> bȝk.w / bȝk.wt</span> : nous, nous sommes des serviteurs / servantes <font
-                color="b6b5b0">[m=f]</font>
+                color="B6B5B0">[m=f]</font>
         </li><BR>
-        <li><span class="tra"><B>ntṯn <font color="b6b5b0">(/ nttn)</font></B> bȝk.w / bȝk.wt</span> : vous, vous êtes
-            des serviteurs / servantes <font color="b6b5b0">[m=f]</font>
+        <li><span class="tra"><B>ntṯn <font color="B6B5B0">(/ nttn)</font></B> bȝk.w / bȝk.wt</span> : vous, vous
+            êtes
+            des serviteurs / servantes <font color="B6B5B0">[m=f]</font>
         </li><BR>
-        <li><span class="tra"><B>ntsn</B> bȝk.w / bȝk.wt</span> : eux / elles, ce sont des serviteurs / servantes <font
-                color="b6b5b0">[m=f]</font>
+        <li><span class="tra"><B>ntsn</B> bȝk.w / bȝk.wt</span> : eux / elles, ce sont des serviteurs / servantes
+            <font color="B6B5B0">[m=f]</font>
         </li><BR>
     </ul>
 
@@ -605,7 +669,8 @@
     <ul>
         <li><span class="tra"><B>n(y)</B> p.t Rˁ</span> : le ciel appartient à Rê
         </li><BR>
-        <li><span class="tra">n(y)-sn Rˁ</span> : ils / elles appartiennent à Rê <font color="b6b5b0">[utilisation du
+        <li><span class="tra">n(y)-sn Rˁ</span> : ils / elles appartiennent à Rê <font color="B6B5B0">[utilisation
+                du
                 pronom dépendant]</font>
         </li>
     </ul>
@@ -619,7 +684,10 @@
     <BR>
 
 
-
+    <div class="page-break"></div>
+    <div class="print-only">
+        <BR>
+    </div>
     <font color="4169E1"><B>L'INFINITIF</B></font><BR><BR>
     Utilisé dans les légendes de scènes, les titres de livres.<BR>
     Les verbes forts (stables) ont presque tous un infinitif masculin.<BR>
@@ -630,7 +698,7 @@
     <BR>
     Formation du causatif : <span class="tra">x → s<span>&#8730;</span><span
             style="border-top: 1px solid black">x</span>.t</span>
-    <font color="b6b5b0"> [faire faire]</font>
+    <font color="B6B5B0"> [faire faire]</font>
     <blockquote>
         <svg-container><BR>
             <svg height="480">
@@ -641,33 +709,33 @@
                 <path d="M 90 200 L 100 200" class="link" />
                 <path d="M 90 20 L 90 200" class="link" />
                 <g transform="translate(1, 1)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="25" class="node-text">Forts</text>
                 </g>
                 <g transform="translate(100, 1)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="12" class="node-text">2-lit.</text>
                     <text x="40" y="25" class="node-text-tra">ḏd</text>
                     <text x="40" y="37" class="node-text-low">« dire »</text>
                 </g>
                 <g transform="translate(200, 1)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="12" class="node-text">Causatif</text>
                     <text x="40" y="25" class="node-text-tra">sḏd.t</text>
                     <text x="40" y="37" class="node-text-low">« raconter »</text>
                 </g>
                 <g transform="translate(100, 61)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="15" class="node-text">3-lit.</text>
                     <text x="40" y="30" class="node-text-tra">sḏm</text>
                 </g>
                 <g transform="translate(100, 121)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="15" class="node-text">4-lit.</text>
                     <text x="40" y="30" class="node-text-tra">ptpt</text>
                 </g>
                 <g transform="translate(100, 180)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="15" class="node-text">5-lit.</text>
                     <text x="40" y="30" class="node-text-tra">ngȝgȝ</text>
                 </g>
@@ -675,32 +743,32 @@
                 <path d="M 90 320 L 100 320" class="link" />
                 <path d="M 90 260 L 90 320" class="link" />
                 <g transform="translate(1, 240)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="25" class="node-text">Faibles</text>
                 </g>
                 <g transform="translate(100, 240)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="15" class="node-text">3-inf.</text>
                     <text x="40" y="30" class="node-text-tra">jrj</text>
                 </g>
                 <g transform="translate(100, 300)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="15" class="node-text">4-inf.</text>
                     <text x="40" y="30" class="node-text-tra">ḥmsj</text>
                 </g>
                 <g transform="translate(1, 360)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="15" class="node-text">Anom.</text>
                     <text x="40" y="35" class="node-text-tra">rdj → rd.t/d.t</text>
                 </g>
                 <path d="M 80 440 L 100 440" class="link" />
                 <path d="M 80 440 L 100 440" class="link" />
                 <g transform="translate(1, 420)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="25" class="node-text">Géminés</text>
                 </g>
                 <g transform="translate(100, 420)">
-                    <rect width="80" height="40" rx="5" class="node-rect" />
+                    <rect width="80" height="40" rx="10" class="node-rect" />
                     <text x="40" y="15" class="node-text">2-gém.</text>
                     <text x="40" y="30" class="node-text-tra">mȝȝ</text>
                 </g>
@@ -709,17 +777,29 @@
 
 
 
+    <div class="page-break"></div>
+    <div class="print-only">
+        <BR>
+    </div>
     <font color="4169E1"><B>L'INFINITIF NÉGATIF</B>
     </font><BR><BR>
-    Se construit avec l'auxiliaire <span class="tra">tm</span> (« cesser ») :<BR><BR>
+    Se construit avec l'auxiliaire <span class="tra">tm</span> (« cesser ») :<BR>
     <blockquote>
         <blockquote><span class="bul">
                 <div class="phrase">
                     <div class="cadrat">
                         <div class="pile">
-                            <span>𓏏</span>
-                            <span>𓍃</span>
+                            <span>
+                                <font size="4">𓏏</font>
+                            </span>
+                            <span>
+                                <font size="4">𓍃</font>
+                            </span>
                         </div>
+                    </div>
+                    <div class="cadrat">
+                        <span class="seul">
+                        </span>
                     </div>
                     <div class="cadrat">
                         <span class="seul">𓅓
@@ -737,24 +817,24 @@
     <ul>
         <li>forts :<ul>
                 <li>2-lit. : <span class="tra">ḏd → <B>tm</B> ḏd<B>(w)</B></span>
-                    <font color="b6b5b0"> [<span class="tra">w</span> : marque de l'infinitif ancien]</font></span>
-                </li><BR>
+                    <font color="B6B5B0"> [<span class="tra">w</span> : marque de l'infinitif ancien]</font></span>
+                </li>
                 <ul>
                     <li>causatif : <span class="tra">sḏd.t → tm sḏd(w)</span></li>
-                </ul><BR>
+                </ul>
                 <li>3-lit. : <span class="tra">sḏm → tm sḏm
                 </li>
             </ul><BR>
         <li>faibles :<ul>
-                <li>3-inf. : <span class="tra">jr.t → tm jr(w/y)</span></li><BR>
+                <li>3-inf. : <span class="tra">jr.t → tm jr(w/y)</span></li>
                 <li>4-inf. : <span class="tra">ḥms.t → tm ḥms(w/y)</span></li><BR>
             </ul>
         <li>anom. : <span class="tra">rd.t / d.t → tm rd(w/y)</span></li><BR>
-        <li>géminés : pas de <span class="tra">w </span>final :</li><BR>
+        <li>géminés : sans <span class="tra">w </span>final :</li>
         <ul>
             <li><span class="tra">wnn → tm wnn</span></li>
             <li><span class="tra">mȝȝ → tm mȝȝ</span>
-                <font color="b6b5b0"> / <span class="tra">mȝw</span> [rare]</font>
+                <font color="B6B5B0"> / <span class="tra">mȝw</span> [rare]</font>
             </li>
         </ul>
         </li>
@@ -769,19 +849,23 @@
         <div class="phrase">
             <div class="cadrat">
                 <div class="pile">
-                    <span>𓁷</span>
-                    <span><sup>𓏤</sup></span>
+                    <span>
+                        <font size="4">𓁷</font>
+                    </span>
+                    <span>
+                        <font size="4"><sup>𓏤</sup></font>
+                    </span>
                 </div>
             </div>
         </div>
     </span>
-    <BR>
+    <BR><BR>
     <ul>
-        <li><span class="tra">jw bȝk <B>ḥr</B> pr.t</span> : le serviteur est en train de sortir <font color="b6b5b0">
+        <li><span class="tra">jw bȝk <B>ḥr</B> pr.t</span> : le serviteur est en train de sortir <font color="B6B5B0">
                 [« est
                 sur sortir »]</font>
         </li><BR>
-        <li><span class="tra">mṯn sw ḥr pr.t !</span> : voyez, il est en train de sortir ! <font color="b6b5b0">
+        <li><span class="tra">mṯn sw ḥr pr.t !</span> : voyez, il est en train de sortir ! <font color="B6B5B0">
                 [pron. dép. derrière une P.P.]</font>
         </li><BR>
         <li><span class="tra">wn bȝk ḥr pr.t</span> : le serviteur était en train de sortir</li><BR>
@@ -795,15 +879,18 @@
     En deuxième position, elles servent à donner le ton.<BR>
     <ul>
         <li><span class="tra">wnm <B>rf</B> !</span> : mange <B>donc</B> !</li><BR>
-        <li><span class="tra">wnn(=j) <B>ḥm</B> ḥr <font color="b6b5b0">sṯp</font> sȝ=j <font color="b6b5b0">ḥȝ
+        <li><span class="tra">wnn(=j) <B>ḥm</B> ḥr <font color="B6B5B0">sṯp</font> sȝ=j <font color="B6B5B0">ḥȝ
                 </font> sȝ.t=j</span> :
             je serai <B>certes</B> en train d'étendre ma protection
-            sur ma fille <font color="b6b5b0">[« ...retrancher...derrière... »]</font>
+            sur ma fille <font color="B6B5B0">[« ...retrancher...derrière... »]</font>
         </li><BR>
     </ul>
 
 
-
+    <div class="page-break"></div>
+    <div class="print-only">
+        <BR>
+    </div>
     <font color="4169E1"><B>L'AORISTE</B></font><BR><BR>
     Exprime <B>l'habitude, la norme</B>. L'aoriste exclamatif n'est que très rarement rencontré.<BR>
     <ul>
@@ -889,7 +976,7 @@
     Exprime la<B> volonté, l'obligation</B>. Peut avoir un sens de subjonctif ou de futur.<BR>
     Le sujet est toujours <B>derrière</B> le verbe.<BR>
     On n'est pas dans l'indicatif, donc jamais de <span class="tra">jw</span>.<BR>
-    <font color="b6b5b0">[cf. le prospectif non autonome, on peut avoir <span class="tra">jw</span> dans la
+    <font color="B6B5B0">[cf. le prospectif non autonome, on peut avoir <span class="tra">jw</span> dans la
         proposition
         principale, avant la subordonnée au prospectif.]</font><BR>
 
@@ -901,7 +988,10 @@
     </ul>
 
 
-
+    <div class="page-break"></div>
+    <div class="print-only">
+        <BR>
+    </div>
     <font color="4169E1"><B>LE PROSPECTIF PASSIF</B></font><BR>
     <ul>
         <li>Au récent : <span class="tra">sḏm<B>=tw</B>=f</span> : qu'il soit entendu / qu'on l'entende / il
@@ -919,14 +1009,14 @@
     <ul>
         <li>Au récent : <span class="tra"><B>nn</B> sḏm bȝk</span> : le serviteur n'entendra pas</li><BR>
         <li>A l'ancien : <span class="tra"><B>n</B> sḏm<B>(w)</B> bȝk</span>
-            <font color="b6b5b0">[idem]</font>
+            <font color="B6B5B0">[idem]</font>
         </li><BR>
     </ul>
     Il existe une particule enclitique négative <span class="tra">w</span> assez rare qui ne sert qu'avec le
     prospectif et
     l'impératif.
     <ul>
-        <li> <span class="tra">sḏm=f <B>w</B></span> : il n'entendra pas / qu'il n'entende pas ! <font color="b6b5b0">
+        <li> <span class="tra">sḏm=f <B>w</B></span> : il n'entendra pas / qu'il n'entende pas ! <font color="B6B5B0">
                 [forme impérative du subjonctif pour la 3e pers.]</font>
         </li><BR>
     </ul>
@@ -938,7 +1028,7 @@
         <li>Au récent : <span class="tra">nn sḏm=tw=f</span> : il ne sera pas entendu / on ne l'entendra pas
         </li><BR>
         <li>A l'ancien : <span class="tra">n sḏm(w)=f</span>
-            <font color="b6b5b0">[analogue à la négation de l'actif]</font>
+            <font color="B6B5B0">[analogue à la négation de l'actif]</font>
         </li><BR>
     </ul>
 
@@ -970,8 +1060,8 @@
     plaisir »).<BR><BR>
     <ul>
         <li><span class="tra">jw=j ḥr mr.t <B>sḏm=f</B> jḫ <B>ḏd=f</B></span> : je suis en train de <font
-                color="b6b5b0">[<span class="tra">ḥr</span>]</font> désirer qu'il
-            entende, de sorte <font color="b6b5b0">[<span class="tra">jḫ</span>]</font>
+                color="B6B5B0">[<span class="tra">ḥr</span>]</font> désirer qu'il
+            entende, de sorte <font color="B6B5B0">[<span class="tra">jḫ</span>]</font>
             qu'il parle</li><BR>
         <li><span class="tra">jw=j ḥr rd.t <B>sḏm=f</B></span> : je fais en sorte qu'il entende</li><BR>
 
@@ -979,7 +1069,10 @@
     <BR>
 
 
-
+    <div class="page-break"></div>
+    <div class="print-only">
+        <BR>
+    </div>
     <font color="4169E1"><B>LA NÉGATION DU PROSPECTIF NON AUTONOME</B></font><BR><BR>
     Se construit avec <span class="tra">tm</span> et <span class="tra">w</span> :
     <ul>
@@ -999,7 +1092,7 @@
     Fait<B> redoubler</B> la dernière lettre.
     <BR>
     <ul>
-        <li><span class="tra"><B>n</B> nḥm<B>m</B>=f !</span> : il ne sera pas enlevé ! (~ jamais !)</li><BR>
+        <li><span class="tra"><B>n</B> nḥm<B>m</B>=f !</span> : il ne sera pas enlevé ! (≃ jamais !)</li><BR>
         <li><span class="tra">n nḥmm tp=j mˁ=j !</span> : ma tête ne me sera pas enlevée !</li>
     </ul>
     <BR>
@@ -1009,9 +1102,9 @@
     <font color="4169E1"><B>L'IMPÉRATIF</B></font><BR><BR>
     Pas de <span class="tra">jw.</span><BR>
     <ul>
-        <li><span class="tra">sḏm=k / ṯ !</span> : que tu entendes !<font color="b6b5b0"> [m / f]</font>
+        <li><span class="tra">sḏm=k / ṯ !</span> : que tu entendes !<font color="B6B5B0"> [m / f]</font>
         </li><BR>
-        <li><span class="tra">sḏm !</span> : entends !<font color="b6b5b0"> [m=f]</font>
+        <li><span class="tra">sḏm !</span> : entends !<font color="B6B5B0"> [m=f]</font>
         </li><BR>
         <li><span class="tra">sḏm.w !</span> : entendez !</li><BR>
         <li><span class="tra">pr !</span> : sors / monte !</li><BR>
@@ -1028,13 +1121,17 @@
     <ul>
         <li><span class="tra"><B>m</B> sḏm(w) !</span> : n'entendez pas !</li><BR>
         <li><span class="tra">sḏm <B>w</B> !</span>
-            <font color="b6b5b0">[idem]</font>
+            <font color="B6B5B0">[idem]</font>
         </li><BR><BR>
     </ul>
 
 
 
-    <font color="b6b5b0">* * * * * * * * * Un peu de vocabulaire * * * * * * * * *</font>
+    <div class="page-break"></div>
+    <div class="print-only">
+        <BR><BR>
+    </div>
+    <font color="B6B5B0">* * * * * * * * * Un peu de vocabulaire * * * * * * * * *</font>
     <BR><BR><BR>
 
 
@@ -1064,7 +1161,7 @@
         </ul>
         <li><span class="tra">jȝb(y).t </span>: l'Est<span class="tra"></li>
         <ul>
-            <li><span class="tra">jȝb </span>: la gauche <font color="b6b5b0">[le côté de <span class="tra">jb</span>,
+            <li><span class="tra">jȝb </span>: la gauche <font color="B6B5B0">[le côté de <span class="tra">jb</span>,
                     le coeur]</font>
             </li><BR>
         </ul>
@@ -1084,5 +1181,6 @@
         </li><BR>
     </ul>
     <BR>
+
 
 </body>
