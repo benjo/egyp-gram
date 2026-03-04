@@ -14,22 +14,6 @@
             --small-font-size: 14px;
         }
 
-        .print-only {
-            display: none;
-        }
-
-        @media print {
-            .page-break {
-                display: block;
-                page-break-before: always;
-                break-before: page;
-            }
-
-            .print-only {
-                display: block;
-            }
-        }
-
         @font-face {
             font-family: 'Noto Sans Egyptian Hieroglyphs';
             src: url('fonts/NotoSansEgyptianHieroglyphs-Regular.ttf') format('truetype');
@@ -43,11 +27,13 @@
             font-family: "Gill Sans MT", "Gill Sans", "Roboto", "Times New Roman";
         }
 
+        /*translittérations*/
         .tra {
-            font-family: "Junicode", "Gentium Plus", "Times New Roman";
+            font-family: "Times New Roman";
             font-style: italic;
         }
 
+        /*affichage en cadrats*/
         .phrase {
             display: flex;
             align-items: center;
@@ -81,6 +67,7 @@
             align-items: center;
             height: 100%;
             width: 100%;
+            font-family: 'Noto Sans Egyptian Hieroglyphs';
         }
 
         .pile span {
@@ -100,6 +87,7 @@
             font-family: 'Noto Sans Egyptian Hieroglyphs';
         }
 
+        /*organigramme verbes*/
         .node-rect {
             fill: #F9F9F9;
             stroke: #999999;
@@ -114,7 +102,7 @@
 
         .node-text-tra {
             font-size: 13px;
-            font-family: "Trismegistos", "Junicode", "Gentium Plus", "Times New Roman";
+            font-family: "Times New Roman";
             font-style: italic;
             text-anchor: middle;
         }
@@ -133,6 +121,23 @@
         .svg-container {
             justify-content: center;
             margin: 0px 0px;
+        }
+
+        /*sauts de page pour impression*/
+        .print-only {
+            display: none;
+        }
+
+        @media print {
+            .page-break {
+                display: block;
+                page-break-before: always;
+                break-before: page;
+            }
+
+            .print-only {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -170,7 +175,7 @@
             </font>
         </li><BR>
         <li><span class="tra">sn.wt nfr.wt</span> : des / les soeurs parfaites :<BR><BR>
-            <span class="bul">
+            <div class="bul">
                 <div class="phrase">
                     <div class="cadrat">
                         <span class="seul">𓌢</span>
@@ -178,7 +183,7 @@
                     <div class="cadrat">
                         <div class="pile">
                             <span>𓈖</span>
-                            <span><sup>𓏏<sup></sup></span>
+                            <span><sup>𓏏</sup></span>
                         </div>
                     </div>
                     <div class="cadrat">
@@ -197,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-            </span>
+            </div>
         </li>
     </ul>
     <BR><BR>
@@ -209,7 +214,7 @@
     nombre.<BR>
     <ul>
         <li><span class="tra">nṯr → nṯr(y)</span> : divin :
-            <span class="bul">
+            <div class="bul">
                 <div class="phrase">
                     <div class="cadrat">
                         <span class="seul">
@@ -222,10 +227,11 @@
                             <span><sup>𓏭</sup></span>
                         </div>
                     </div>
-        </li> <BR>
+                </div>
+            </div>
+        </li><BR>
         <li><span class="tra">bȝkty n(y)t(y) sš</span> : les deux servantes du scribe <font color="B6B5B0">[duel]</font>
         </li>
-    </ul>
     </ul>
     <BR>
 
@@ -251,7 +257,7 @@
         <li>Proche<span class="tra"> “-n” [pn | tn | jpn | jptn] : nṯr.t <B>tn</B> nfr.t</span> : cette bonne déesse-ci
             <font color="B6B5B0">[ms | fs | mp | fp]</font><BR><BR>
             <blockquote>
-                <span class="bul">
+                <div class="bul">
                     <div class="phrase">
                         <div class="cadrat">
                             <div class="pile">
@@ -260,9 +266,9 @@
                             </div>
                         </div>
                     </div>
-                </span>
+                </div>
                 <font color="B6B5B0">|</font>
-                <span class="bul">
+                <div class="bul">
                     <div class="phrase">
                         <div class="cadrat">
                             <div class="pile">
@@ -271,9 +277,9 @@
                             </div>
                         </div>
                     </div>
-                </span>
+                </div>
                 <font color="B6B5B0">|</font>
-                <span class="bul">
+                <div class="bul">
                     <div class="phrase">
                         <div class="cadrat">
                             <span class="seul">𓇋</span>
@@ -285,9 +291,9 @@
                             </div>
                         </div>
                     </div>
-                </span>
+                </div>
                 <font color="B6B5B0">|</font>
-                <span class="bul">
+                <div class="bul">
                     <div class="phrase">
                         <div class="cadrat">
                             <span class="seul">𓇋</span>
@@ -302,7 +308,7 @@
                             <span class="seul"><sup>𓏏</sup></span>
                         </div>
                     </div>
-                </span>
+                </div>
             </blockquote>
         </li><BR><BR>
         <li>Médian<span class="tra"> “-w” [pw | tw | jpw | jptw] : nṯr <B>pw</B> nfr</span> : ce bon dieu-ci</li><BR>
@@ -316,10 +322,11 @@
     <font color="4169E1"><B>« CECI / ÇA / CELA »</B></font><BR>
     <ul>
         <li>Proche<span class="tra"> “-n” : <B>nn</B> n(y) bȝk.w</span> : ces serviteurs-ci <font color="B6B5B0">
-                <BR>/ <span class="tra"> bȝk.w jpn</span> [Ancien Empire]</span>
+                <BR>/ <span class="tra"> bȝk.w jpn</span> [Ancien Empire]
             </font><BR><BR>
             <blockquote>
-                <blockquote><span class="bul">
+                <blockquote>
+                    <div class="bul">
                         <div class="phrase">
                             <div class="cadrat">
                                 <span class="seul">𓇑</span>
@@ -333,26 +340,28 @@
                                     <span><sup>𓈖</sup></span>
                                 </div>
                             </div>
-                    </span></blockquote>
+                        </div>
+                    </div>
+                </blockquote>
             </blockquote>
         </li><BR><BR>
         <li>Médian<span class="tra"> “-w” : <B>nw</B> n(y) bȝk.w</span> : ces serviteurs-ci <font color="B6B5B0">
-                <BR>/ <span class="tra"> bȝk.w jpw</span> [A.E.]</span>
+                <BR>/ <span class="tra"> bȝk.w jpw</span> [A.E.]
             </font><BR><BR>
             <blockquote>
-                <blockquote><span class="bul">
+                <blockquote>
+                    <div class="bul">
                         <div class="phrase">
                             <div class="cadrat">
                                 <div class="pile">
-                                    <span><sub>
-                                            <font size=3>𓈖</font>
-                                        </sub></span>
-                                    <span><span>
-                                            <font size=4>𓍉</font>
-                                        </span>
-                                        <span><sup>
-                                                <font size=4>𓏌</font>
-                                            </sup></span>
+                                    <sub>
+                                        <font size=3>𓈖</font>
+                                    </sub>
+                                    </span>
+                                    <font size=4>𓍉</font>
+                                    <sup>
+                                        <font size=4>𓏌</font>
+                                    </sup>
                                 </div>
                             </div>
                             <div class="cadrat">
@@ -360,14 +369,16 @@
                                 </span>
                             </div>
                         </div>
-                    </span></blockquote>
-                <blockquote>
+                    </div>
+                </blockquote>
+            </blockquote>
         </li><BR><BR>
         <li>Lointain<span class="tra"> “-fȝ” : <B>nfȝ</B> n(y) bȝk.w</span> : ces serviteurs-là <font color="B6B5B0">
-                <BR>/ <span class="tra"> bȝk.w jpfȝ</span> [A.E.]</span>
+                <BR>/ <span class="tra"> bȝk.w jpfȝ</span> [A.E.]
             </font><BR><BR>
             <blockquote>
-                <blockquote><span class="bul">
+                <blockquote>
+                    <div class="bul">
                         <div class="phrase">
                             <div class="cadrat">
                                 <div class="pile">
@@ -382,6 +393,7 @@
                             <div class="cadrat">
                                 <span class="seul">
                                     <sup>
+                                        <!--aligner-->
                                         <font size=3>(</font><sub>𓄿</sub><font size=3>)</font>
                                     </sup>
                                 </span>
@@ -395,11 +407,12 @@
                                     <sup>
                                         <font size=3>(</font>𓈐<font size=3>)</font>
                                     </sup>
-                                </span></blockquote>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </blockquote>
             </blockquote>
-            </div>
-            </div>
-            </span>
         </li>
     </ul><BR><BR>
 
@@ -554,8 +567,7 @@
             <font color="B6B5B0"> [m / f]</font>
         </li><BR>
         <li><span class="tra">mṯn <B>sw / s.y</B>
-                <font color="B6B5B0">(/ s(.y) / s.t )</font>
-                </font> m njw.t !
+                <font color="B6B5B0">(/ s(.y) / s.t )</font> m njw.t !
             </span> : voyez, il / elle est dans la ville !</li><BR>
         <li><span class="tra">mṯn <B>n</B> m pr !</span> : voyez, nous sommes dans la maison !</li><BR>
         <li><span class="tra">jsṯ <B>ṯn</B> m njw.t</span> : or, vous êtes dans la ville</li><BR>
@@ -689,13 +701,15 @@
         <BR>
     </div>
     <font color="4169E1"><B>L'INFINITIF</B></font><BR><BR>
-    Utilisé dans les légendes de scènes, les titres de livres.<BR>
-    Les verbes forts (stables) ont presque tous un infinitif masculin.<BR>
-    Les verbes faibles (une consonne part) sont tous féminins:<span class="tra"></span> <span>&#8730;</span><span
-        style="border-top: 1px solid black"><span class="tra">jrj</span></span> →
-    <span class="tra">jr.t</span> :
-    faire → l'action.
-    <BR>
+    Utilisé dans les légendes de scènes, les titres de livres.
+    <ul>
+        <li>Les verbes forts (stables) ont presque tous un infinitif masculin.<BR></li>
+        <li>Les verbes faibles (une consonne part) sont tous féminins:<span class="tra"></span>
+            <span>&#8730;</span><span style="border-top: 1px solid black"><span class="tra">jrj</span></span> →
+            <span class="tra">jr.t</span> :
+            faire → l'action.
+        </li>
+    </ul>
     Formation du causatif : <span class="tra">x → s<span>&#8730;</span><span
             style="border-top: 1px solid black">x</span>.t</span>
     <font color="B6B5B0"> [faire faire]</font>
@@ -773,6 +787,7 @@
                     <text x="40" y="30" class="node-text-tra">mȝȝ</text>
                 </g>
             </svg>
+        </svg-container>
     </blockquote>
 
 
@@ -785,7 +800,8 @@
     </font><BR><BR>
     Se construit avec l'auxiliaire <span class="tra">tm</span> (« cesser ») :<BR>
     <blockquote>
-        <blockquote><span class="bul">
+        <blockquote>
+            <div class="bul">
                 <div class="phrase">
                     <div class="cadrat">
                         <div class="pile">
@@ -812,23 +828,27 @@
                         <span class="seul"><sup>𓂜</sup></span>
                     </div>
                 </div>
-            </span></blockquote>
+            </div>
+        </blockquote>
     </blockquote><BR>
     <ul>
-        <li>forts :<ul>
+        <li>forts :
+            <ul>
                 <li>2-lit. : <span class="tra">ḏd → <B>tm</B> ḏd<B>(w)</B></span>
-                    <font color="B6B5B0"> [<span class="tra">w</span> : marque de l'infinitif ancien]</font></span>
+                    <font color="B6B5B0"> [<span class="tra">w</span> : marque de l'infinitif ancien]</font>
                 </li>
                 <ul>
                     <li>causatif : <span class="tra">sḏd.t → tm sḏd(w)</span></li>
                 </ul>
                 <li>3-lit. : <span class="tra">sḏm → tm sḏm
                 </li>
-            </ul><BR>
+            </ul>
+        </li><BR>
         <li>faibles :<ul>
                 <li>3-inf. : <span class="tra">jr.t → tm jr(w/y)</span></li>
                 <li>4-inf. : <span class="tra">ḥms.t → tm ḥms(w/y)</span></li><BR>
             </ul>
+        </li>
         <li>anom. : <span class="tra">rd.t / d.t → tm rd(w/y)</span></li><BR>
         <li>géminés : sans <span class="tra">w </span>final :</li>
         <ul>
@@ -837,7 +857,6 @@
                 <font color="B6B5B0"> / <span class="tra">mȝw</span> [rare]</font>
             </li>
         </ul>
-        </li>
     </ul>
     <BR>
 
@@ -845,7 +864,7 @@
 
     <font color="4169E1"><B>LE PROGRESSIF</B></font><BR><BR>
     Action en cours dans un temps donné, avec <span class="tra">ḥr</span> :
-    <span class="bul">
+    <div class="bul">
         <div class="phrase">
             <div class="cadrat">
                 <div class="pile">
@@ -858,7 +877,7 @@
                 </div>
             </div>
         </div>
-    </span>
+    </div>
     <BR><BR>
     <ul>
         <li><span class="tra">jw bȝk <B>ḥr</B> pr.t</span> : le serviteur est en train de sortir <font color="B6B5B0">
@@ -907,7 +926,7 @@
             servante</li>
         <BR>
         <li><span class="tra">jw=f pr=f m hrw</span> : il a l'habitude de sortir dans la journée :<BR><BR>
-            <span class="bul">
+            <div class="bul">
                 <div class="phrase">
                     <div class="cadrat">
                         <span class="seul">𓇋</span>
@@ -940,7 +959,7 @@
                     </div>
                     <span>𓇳 𓏤</span>
                 </div>
-            </span>
+            </div>
         </li>
         <BR><BR>
     </ul>
@@ -1046,7 +1065,7 @@
         <li><span class="tra"><B>jm</B>=k sḏm(w)</span> : que tu n'entendes pas / puisses-tu ne pas entendre
         </li>
     </ul>
-    Le sujet passe derrière : <ul <ul>
+    Le sujet passe derrière : <ul>
         <li><span class="tra">jm sḏm(w) bȝk</span> : que le serviteur n'entende pas</li><BR>
         <li><span class="tra">jm šm(w) bȝ=j</span> : que mon <I>ba</I> ne file pas !</li>
     </ul>
@@ -1159,7 +1178,7 @@
         <ul>
             <li><span class="tra">jmn</span> : la droite</li><BR>
         </ul>
-        <li><span class="tra">jȝb(y).t </span>: l'Est<span class="tra"></li>
+        <li><span class="tra">jȝb(y).t </span>: l'Est</li>
         <ul>
             <li><span class="tra">jȝb </span>: la gauche <font color="B6B5B0">[le côté de <span class="tra">jb</span>,
                     le coeur]</font>
