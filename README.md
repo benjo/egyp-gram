@@ -1,2 +1,3 @@
-𓄿 Grammar of egyptian hieroglyphs (in french) - Summary of lecture notes\
+𓄿 Grammar of egyptian hieroglyphs\
+Summary of lecture notes (in french)\
 https://benjo.github.io/egyp-gram/
