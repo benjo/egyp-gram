@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𓄿 Grammaire Égyptienne [2ème année]</title>
+  <link rel="icon" type="image/png"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cadrat-size: 20px;
+      --font-size: 28px;
+      --small-font-size: 14px;
+    }
+
+    @font-face {
+      font-family: 'Noto Sans Egyptian Hieroglyphs';
+      src: url('fonts/NotoSansEgyptianHieroglyphs-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      margin-left: 2%;
+      font-family: "Lato", "Gill Sans MT", "Gill Sans", "Cabin", "Roboto", "Times New Roman";
+      font-size: 14px;
+    }
+
+    /*translittérations*/
+    .tra {
+      font-family: "Times New Roman";
+      font-style: italic;
+      font-size: 16px;
+    }
+
+    /*affichage en cadrats*/
+    .phrase {
+      display: flex;
+      align-items: center;
+      gap: 0 px;
+      font-family: 'Noto Sans Egyptian Hieroglyphs';
+    }
+
+    .cadrat {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: var(--cadrat-size);
+      height: var(--cadrat-size);
+      font-family: 'Noto Sans Egyptian Hieroglyphs';
+    }
+
+    .seul {
+      font-size: var(--font-size);
+      justify-content: center;
+      align-items: center;
+      height: 200%;
+      width: 50%;
+      font-family: 'Noto Sans Egyptian Hieroglyphs';
+    }
+
+    .pile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      font-family: 'Noto Sans Egyptian Hieroglyphs';
+    }
+
+    .pile span {
+      font-size: var(--small-font-size);
+      text-align: center;
+    }
+
+    .bul {
+      display: inline-block;
+      margin-left: 0px;
+      vertical-align: middle;
+    }
+
+    .p1 {
+      line-height: 35%;
+      font-family: 'Noto Sans Egyptian Hieroglyphs';
+    }
+
+    .p2 {
+      line-height: 65%;
+      font-family: 'Noto Sans Egyptian Hieroglyphs';
+    }
+
+    .p3 {
+      line-height: 125%;
+      font-family: 'Noto Sans Egyptian Hieroglyphs';
+    }
+
+    .l1 {
+      color: #628BB1;
+    }
+
+    /*organigramme verbes*/
+    .node-rect {
+      fill: #F9F9F9;
+      stroke: #999999;
+      stroke-width: 1;
+    }
+
+    .node-text {
+      font-size: 13px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+
+    .node-text-tra {
+      font-size: 13px;
+      font-family: "Times New Roman";
+      font-style: italic;
+      text-anchor: middle;
+    }
+
+    .node-text-low {
+      font-size: 13px;
+      text-anchor: middle;
+    }
+
+    .link {
+      fill: none;
+      stroke: #999999;
+      stroke-width: 1;
+    }
+
+    .svg-container {
+      justify-content: center;
+      margin: 0px 0px;
+    }
+
+    /*surlignage*/
+    .ti-1 {
+      --couleur: #628BB1;
+      --hauteur-ligne: 1em;
+      line-height: var(--hauteur-ligne);
+      padding: 0.5em 10px;
+      margin: 0;
+      background-image: linear-gradient(var(--couleur) 100%,
+          transparent 0);
+      background-size: 100% var(--hauteur-ligne);
+      background-origin: content-box;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .ti-2 {
+      --couleur: #E1EBFF;
+      --hauteur-ligne: 1em;
+      line-height: var(--hauteur-ligne);
+      padding: 0.15em 10px;
+      margin: 0;
+      background-image: linear-gradient(var(--couleur) 100%,
+          transparent 0);
+      background-size: 100% var(--hauteur-ligne);
+      background-origin: content-box;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /*impression*/
+    .print-only {
+      display: none;
+    }
+
+    @media print {
+      .page-break {
+        display: block;
+        page-break-before: always;
+        break-before: page;
+      }
+
+      .print-only {
+        display: block;
+      }
+
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    /*puces*/
+    ul {
+      list-style-type: disc;
+    }
+
+    ul ul {
+      list-style-type: disc;
+    }
+
+    ul ul ul {
+      list-style-type: disc;
+    }
+
+    ul li::marker {
+      font-size: 0.8em;
+    }
+
+
+    .collapsible {
+      background-color: #E1EBFF;
+      color: white;
+      cursor: pointer;
+      padding: 2px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 14px;
+      margin-left: 0%;
+      font-family: "Lato", "Gill Sans MT", "Gill Sans", "Cabin", "Roboto", "Times New Roman";
+    }
+
+    .active,
+    .collapsible:hover {
+      background-color: #C8DCFF;
+      margin-left: 0%;
+      font-family: "Lato", "Gill Sans MT", "Gill Sans", "Cabin", "Roboto", "Times New Roman";
+    }
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #FFFFFF;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="ti-1">
+    <font color="FFFFFF"><B>GRAMMAIRE DE L' ÉGYPTIEN HIÉROGLYPHIQUE <font size="2" color="D3D3D3">[2ème année]</font>
+      </B></font>
+  </div>
+  <font color="8D8C86" size="2">
+    XX/XX/2026 - benja [point] michel [at] gmail [point] com<BR>
+    Résumé de notes de cours auditeurs libres
+  </font><BR>
+  <font size="2"> <a href="../index.html" class="l1">Retour</a></font><BR><BR>
+
+  <button class="collapsible">
+    <div class="ti-2">
+      <font color="628BB1">Prochainement</font>
+    </div>
+  </button>
+  <div class="content">
+    <BR>
+    <BR><BR>
+  </div>
+
+  <div class="page-break"></div>
+  <div class="print-only"></div>
+
+  <!--<button class="collapsible">
+    <div class="ti-2">
+      <font color="628BB1">38 / X</font>
+    </div>
+  </button>
+  <div class="content">
+    <BR>
+    X
+    <BR><BR>
+  </div>-->
+
+</body>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+</script>
+
+</html>
