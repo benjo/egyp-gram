@@ -26,6 +26,7 @@
     }
 
     body {
+      margin-top: 0;
       margin-left: 2%;
       font-family: "Lato", "Gill Sans MT", "Gill Sans", "Cabin", "Roboto", "Times New Roman";
       font-size: 14px;
@@ -265,10 +266,9 @@
     }
 
     .entete-fixe {
-      position: fixed;
+      position: -webkit-sticky;
+      position: sticky;
       top: 0;
-      left: 2%;
-      right: 0;
       z-index: 1000;
       background-color: #FFFFFF;
       padding-bottom: 8px;
@@ -277,7 +277,7 @@
     }
 
     .entete-espace {
-      height: 110px;
+      display: none;
     }
 
     .entete-fixe .annee {
