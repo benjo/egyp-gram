@@ -256,6 +256,39 @@
       background-color: #C8DCFF;
     }
 
+    /* en-tête fixe : titre, année, Ouvrir tout / Fermer tout / Retour */
+    .entete-fixe {
+      position: fixed;
+      top: 0;
+      left: 2%;
+      right: 0;
+      z-index: 1000;
+      background-color: #FFFFFF;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #E1EBFF;
+      box-sizing: border-box;
+    }
+
+    /* espace réservé sous l'en-tête fixe (hauteur ajustée par le script) */
+    .entete-espace {
+      height: 110px;
+    }
+
+    .entete-fixe .annee {
+      display: block;
+      margin: 4px 0 8px 0;
+    }
+
+    @media print {
+      .entete-fixe {
+        position: static;
+      }
+
+      .entete-espace {
+        display: none;
+      }
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -271,19 +304,19 @@
 
 <body>
 
+<div class="entete-fixe">
   <div class="ti-1">
     <font color="FFFFFF"><B>GRAMMAIRE DE L' ÉGYPTIEN HIÉROGLYPHIQUE
       </B></font>
   </div>
-  <font color="8D8C86" size="2">
+  <font color="8D8C86" size="2" class="annee">
   2ème année - 2026-2027
-  </font><BR><BR>
-  
-
+  </font>
 <button type="button" class="btn-tout" onclick="toutOuvrir()">Ouvrir tout</button>
 <button type="button" class="btn-tout" onclick="toutFermer()">Fermer tout</button>
 &nbsp<font size="2"> <a href="../index.html" class="l1">Retour</a></font>
-<BR><BR>
+</div>
+<div class="entete-espace" id="entete-espace"></div>
 
 <button class="collapsible">
     <div class="ti-2">
@@ -291,7 +324,7 @@
     </div>
   </button>
   <div class="content">
-    
+  Prochainement
     <BR>
     <BR><BR>
   </div>
@@ -309,7 +342,6 @@
     X
     <BR><BR>
   </div>-->
-
 
 </body>
 
@@ -332,6 +364,22 @@ function toutFermer() {
     sections[k].nextElementSibling.style.maxHeight = null;
   }
 }
+
+  // Ajuste l'espace sous l'en-tête fixe à sa hauteur réelle
+  function ajusterEspaceEntete() {
+    var entete = document.querySelector(".entete-fixe");
+    var espace = document.getElementById("entete-espace");
+    if (entete && espace) {
+      espace.style.height = (entete.offsetHeight + 10) + "px";
+    }
+  }
+  ajusterEspaceEntete();
+  window.addEventListener("load", ajusterEspaceEntete);
+  window.addEventListener("resize", ajusterEspaceEntete);
+  window.addEventListener("orientationchange", ajusterEspaceEntete);
+  if (window.ResizeObserver) {
+    new ResizeObserver(ajusterEspaceEntete).observe(document.querySelector(".entete-fixe"));
+  }
 
   var coll = document.getElementsByClassName("collapsible");
   var i;
