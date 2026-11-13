@@ -258,13 +258,20 @@
 
     /* en-tête fixe : titre, année, Ouvrir tout / Fermer tout / Retour */
     .entete-fixe {
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 2%;
+      right: 0;
       z-index: 1000;
       background-color: #FFFFFF;
       padding-bottom: 8px;
-      margin-bottom: 10px;
       border-bottom: 1px solid #E1EBFF;
+      box-sizing: border-box;
+    }
+
+    /* espace réservé sous l'en-tête fixe (hauteur ajustée par le script) */
+    .entete-espace {
+      height: 110px;
     }
 
     .entete-fixe .annee {
@@ -275,6 +282,10 @@
     @media print {
       .entete-fixe {
         position: static;
+      }
+
+      .entete-espace {
+        display: none;
       }
     }
 
@@ -305,6 +316,7 @@
 <button type="button" class="btn-tout" onclick="toutFermer()">Fermer tout</button>
 &nbsp<font size="2"> <a href="../index.html" class="l1">Retour</a></font>
 </div>
+<div class="entete-espace" id="entete-espace"></div>
 
 
   
@@ -2504,6 +2516,22 @@ function toutFermer() {
     sections[k].nextElementSibling.style.maxHeight = null;
   }
 }
+
+  // Ajuste l'espace sous l'en-tête fixe à sa hauteur réelle
+  function ajusterEspaceEntete() {
+    var entete = document.querySelector(".entete-fixe");
+    var espace = document.getElementById("entete-espace");
+    if (entete && espace) {
+      espace.style.height = (entete.offsetHeight + 10) + "px";
+    }
+  }
+  ajusterEspaceEntete();
+  window.addEventListener("load", ajusterEspaceEntete);
+  window.addEventListener("resize", ajusterEspaceEntete);
+  window.addEventListener("orientationchange", ajusterEspaceEntete);
+  if (window.ResizeObserver) {
+    new ResizeObserver(ajusterEspaceEntete).observe(document.querySelector(".entete-fixe"));
+  }
 
   var coll = document.getElementsByClassName("collapsible");
   var i;
