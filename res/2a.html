@@ -240,6 +240,14 @@
       background-color: #FFFFFF;
     }
 
+    @media print {
+      .content {
+      max-height: none !important;
+      overflow: visible !important;
+      transition: none !important;
+    }
+    }
+
     .btn-tout {
       background-color: #E1EBFF;
       color: #628BB1;
