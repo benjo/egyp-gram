@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>𓄿 Grammaire Égyptienne [1ère année]</title>
+  <title>𓃢 Grammaire Égyptienne [1ère année]</title>
   <link rel="icon" type="image/png"
     href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -240,6 +240,22 @@
       background-color: #FFFFFF;
     }
 
+    .btn-tout {
+      background-color: #E1EBFF;
+      color: #628BB1;
+      border: 1px solid #C8DCFF;
+      border-radius: 4px;
+      padding: 2px 10px;
+      margin-left: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: "Lato", "Gill Sans MT", "Gill Sans", "Cabin", "Roboto", "Times New Roman";
+    }
+
+    .btn-tout:hover {
+      background-color: #C8DCFF;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -261,8 +277,13 @@
   </div>
   <font color="8D8C86" size="2">
   1ère année - 2025-2026
-  </font><BR>
-  <font size="2"> <a href="../index.html" class="l1">Retour</a></font><BR><BR>
+  </font><BR><BR>
+  
+
+<button type="button" class="btn-tout" onclick="toutOuvrir()">Ouvrir tout</button>
+<button type="button" class="btn-tout" onclick="toutFermer()">Fermer tout</button>
+&nbsp<font size="2"> <a href="../index.html" class="l1">Retour</a></font>
+<BR><BR>
 
 
   
@@ -2445,6 +2466,24 @@
 
 
 <script>
+
+function toutOuvrir() {
+  var sections = document.getElementsByClassName("collapsible");
+  for (var k = 0; k < sections.length; k++) {
+    sections[k].classList.add("active");
+    var content = sections[k].nextElementSibling;
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+}
+
+function toutFermer() {
+  var sections = document.getElementsByClassName("collapsible");
+  for (var k = 0; k < sections.length; k++) {
+    sections[k].classList.remove("active");
+    sections[k].nextElementSibling.style.maxHeight = null;
+  }
+}
+
   var coll = document.getElementsByClassName("collapsible");
   var i;
 
