@@ -256,6 +256,28 @@
       background-color: #C8DCFF;
     }
 
+    /* en-tête fixe : titre, année, Ouvrir tout / Fermer tout / Retour */
+    .entete-fixe {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #FFFFFF;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #E1EBFF;
+    }
+
+    .entete-fixe .annee {
+      display: block;
+      margin: 4px 0 8px 0;
+    }
+
+    @media print {
+      .entete-fixe {
+        position: static;
+      }
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -271,19 +293,18 @@
 
 <body>
 
+<div class="entete-fixe">
   <div class="ti-1">
     <font color="FFFFFF"><B>GRAMMAIRE DE L' ÉGYPTIEN HIÉROGLYPHIQUE
       </B></font>
   </div>
-  <font color="8D8C86" size="2">
+  <font color="8D8C86" size="2" class="annee">
   1ère année - 2025-2026
-  </font><BR><BR>
-  
-
+  </font>
 <button type="button" class="btn-tout" onclick="toutOuvrir()">Ouvrir tout</button>
 <button type="button" class="btn-tout" onclick="toutFermer()">Fermer tout</button>
 &nbsp<font size="2"> <a href="../index.html" class="l1">Retour</a></font>
-<BR><BR>
+</div>
 
 
   
