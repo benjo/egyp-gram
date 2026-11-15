@@ -43,7 +43,7 @@
     .phrase {
       display: flex;
       align-items: center;
-      gap: 0 px;
+      gap: 0;
       font-family: 'Noto Sans Egyptian Hieroglyphs';
     }
 
@@ -310,6 +310,56 @@
 
 <body>
 
+  <script>
+
+function toutOuvrir() {
+  var sections = document.getElementsByClassName("collapsible");
+  for (var k = 0; k < sections.length; k++) {
+    sections[k].classList.add("active");
+    var content = sections[k].nextElementSibling;
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+}
+
+function toutFermer() {
+  var sections = document.getElementsByClassName("collapsible");
+  for (var k = 0; k < sections.length; k++) {
+    sections[k].classList.remove("active");
+    sections[k].nextElementSibling.style.maxHeight = null;
+  }
+}
+
+  function ajusterEspaceEntete() {
+    var entete = document.querySelector(".entete-fixe");
+    var espace = document.getElementById("entete-espace");
+    if (entete && espace) {
+      espace.style.height = (entete.offsetHeight + 10) + "px";
+    }
+  }
+  ajusterEspaceEntete();
+  window.addEventListener("load", ajusterEspaceEntete);
+  window.addEventListener("resize", ajusterEspaceEntete);
+  window.addEventListener("orientationchange", ajusterEspaceEntete);
+  if (window.ResizeObserver) {
+    new ResizeObserver(ajusterEspaceEntete).observe(document.querySelector(".entete-fixe"));
+  }
+
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+</script>
+
 <div class="entete-fixe">
   <div class="ti-1">
     <font color="FFFFFF"><B>GRAMMAIRE DE L' ÉGYPTIEN HIÉROGLYPHIQUE
@@ -320,7 +370,7 @@
   </font>
 <button type="button" class="btn-tout" onclick="toutOuvrir()">Ouvrir tout</button>
 <button type="button" class="btn-tout" onclick="toutFermer()">Fermer tout</button>
-&nbsp<font size="2"> <a href="../index.html" class="l1">Retour</a></font>
+&nbsp;<font size="2"> <a href="../index.html" class="l1">Retour</a></font>
 </div>
 <div class="entete-espace" id="entete-espace"></div>
 <BR>
@@ -2504,55 +2554,5 @@
 
 </body>
 
-
-<script>
-
-function toutOuvrir() {
-  var sections = document.getElementsByClassName("collapsible");
-  for (var k = 0; k < sections.length; k++) {
-    sections[k].classList.add("active");
-    var content = sections[k].nextElementSibling;
-    content.style.maxHeight = content.scrollHeight + "px";
-  }
-}
-
-function toutFermer() {
-  var sections = document.getElementsByClassName("collapsible");
-  for (var k = 0; k < sections.length; k++) {
-    sections[k].classList.remove("active");
-    sections[k].nextElementSibling.style.maxHeight = null;
-  }
-}
-
-  function ajusterEspaceEntete() {
-    var entete = document.querySelector(".entete-fixe");
-    var espace = document.getElementById("entete-espace");
-    if (entete && espace) {
-      espace.style.height = (entete.offsetHeight + 10) + "px";
-    }
-  }
-  ajusterEspaceEntete();
-  window.addEventListener("load", ajusterEspaceEntete);
-  window.addEventListener("resize", ajusterEspaceEntete);
-  window.addEventListener("orientationchange", ajusterEspaceEntete);
-  if (window.ResizeObserver) {
-    new ResizeObserver(ajusterEspaceEntete).observe(document.querySelector(".entete-fixe"));
-  }
-
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-    });
-  }
-</script>
 
 </html>
