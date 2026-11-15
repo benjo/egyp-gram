@@ -2502,55 +2502,74 @@
     <BR>
   </div>
   
-  <script>
+ <script>
 
-function toutOuvrir() {
-  var sections = document.getElementsByClassName("collapsible");
-  for (var k = 0; k < sections.length; k++) {
-    sections[k].classList.add("active");
-    var content = sections[k].nextElementSibling;
-    content.style.maxHeight = content.scrollHeight + "px";
-  }
-}
+    const OUVRIR_AU_DEMARRAGE = false;
 
-function toutFermer() {
-  var sections = document.getElementsByClassName("collapsible");
-  for (var k = 0; k < sections.length; k++) {
-    sections[k].classList.remove("active");
-    sections[k].nextElementSibling.style.maxHeight = null;
-  }
-}
-
-  function ajusterEspaceEntete() {
-    var entete = document.querySelector(".entete-fixe");
-    var espace = document.getElementById("entete-espace");
-    if (entete && espace) {
-      espace.style.height = (entete.offsetHeight + 10) + "px";
-    }
-  }
-  ajusterEspaceEntete();
-  window.addEventListener("load", ajusterEspaceEntete);
-  window.addEventListener("resize", ajusterEspaceEntete);
-  window.addEventListener("orientationchange", ajusterEspaceEntete);
-  if (window.ResizeObserver) {
-    new ResizeObserver(ajusterEspaceEntete).observe(document.querySelector(".entete-fixe"));
-  }
-
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
+    function toutOuvrir() {
+      var sections = document.getElementsByClassName("collapsible");
+      for (var k = 0; k < sections.length; k++) {
+        sections[k].classList.add("active");
+        var content = sections[k].nextElementSibling;
         content.style.maxHeight = content.scrollHeight + "px";
       }
+    }
+
+
+    function toutFermer() {
+      var sections = document.getElementsByClassName("collapsible");
+      for (var k = 0; k < sections.length; k++) {
+        sections[k].classList.remove("active");
+        sections[k].nextElementSibling.style.maxHeight = null;
+      }
+    }
+
+    document.querySelectorAll(".content img").forEach(function (img) {
+      img.addEventListener("load", function () {
+        var c = img.closest(".content");
+        if (c.style.maxHeight) c.style.maxHeight = c.scrollHeight + "px";
+      });
     });
-  }
-</script>
+
+    function ajusterEspaceEntete() {
+      var entete = document.querySelector(".entete-fixe");
+      var espace = document.getElementById("entete-espace");
+      if (entete && espace) {
+        espace.style.height = (entete.offsetHeight + 10) + "px";
+      }
+    }
+    ajusterEspaceEntete();
+    window.addEventListener("load", ajusterEspaceEntete);
+    window.addEventListener("resize", ajusterEspaceEntete);
+    window.addEventListener("orientationchange", ajusterEspaceEntete);
+    if (window.ResizeObserver) {
+      new ResizeObserver(ajusterEspaceEntete).observe(document.querySelector(".entete-fixe"));
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+
+    window.addEventListener("load", function () {
+      if (OUVRIR_AU_DEMARRAGE) {
+        toutOuvrir();
+      } else {
+        toutFermer();
+      }
+    });
+
+  </script>
 
 </body>
 
