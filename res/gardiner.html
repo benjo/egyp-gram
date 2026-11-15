@@ -43,7 +43,7 @@
     .phrase {
       display: flex;
       align-items: center;
-      gap: 0s;
+      gap: 0;
       font-family: 'Noto Sans Egyptian Hieroglyphs';
     }
 
@@ -310,7 +310,69 @@
 
 <body>
 
-  <script>
+  
+
+  <div class="entete-fixe">
+    <div class="ti-1">
+      <font color="FFFFFF"><B>GRAMMAIRE DE GARDINER</B></font>
+    </div>
+    <font color="8D8C86" size="2" class="annee">
+      Ceci est un projet de version abrégée en français de la grammaire Gardiner. Les numéros de paragraphe
+      correspondent à ceux de l'ouvrage, en démarrant ici à la section 27.
+    </font>
+    <button type="button" class="btn-tout" onclick="toutOuvrir()">Ouvrir tout</button>
+    <button type="button" class="btn-tout" onclick="toutFermer()">Fermer tout</button>
+    &nbsp;<font size="2"> <a href="../index.html" class="l1">Retour</a></font>
+  </div>
+  <div class="entete-espace" id="entete-espace"></div>
+  <BR>
+  <button class="collapsible">
+    <div class="ti-2">
+      <font color="628BB1">§ 27. Phrases verbales</font>
+    </div>
+  </button>
+  <div class="content"><BR>
+    Ordre : verbe-sujet-objet-locution adverbiale<BR><BR>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="svg/27.svg" alt="Description" style="height: 30px; width: auto;">
+      <span><span class="tra">wbn rˁ m pt</span> : Le soleil est dans le ciel</span><BR><BR>
+    </div>
+    <BR>
+  </div>
+
+  <button class="collapsible">
+    <div class="ti-2">
+      <font color="628BB1">§ 28. Phrases non-verbales</font>
+    </div>
+  </button>
+  <div class="content"><BR>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="svg/28.svg" alt="Description" style="height: 30px; width: auto;">
+      <span><span class="tra">rˁ m pt</span> : Le soleil est dans le ciel</span><BR><BR>
+    </div>
+    <BR>Types :
+    <ul>
+      <li>à prédicat adverbial : « Le scribe est là »</li>
+      <li>à prédicat pronominal ou nominal : « Le scribe est un fripon »</li>
+      <li>à prédicat adjectival : « Le scribe est bon »</li>
+    </ul>
+    <BR>
+  </div>
+
+  <button class="collapsible">
+    <div class="ti-2">
+      <font color="628BB1">§ 28.1 Phrases non-verbales à prédicat adverbial</font>
+    </div>
+  </button>
+  <div class="content"><BR>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="svg/29.svg" alt="Description" style="height: 30px; width: auto;">
+      <span><span class="tra">Rˁ jm </span> : Rê est là</span><BR><BR>
+    </div>
+    <BR>
+  </div>
+
+<script>
 
 const OUVRIR_AU_DEMARRAGE = false;
 
@@ -378,67 +440,6 @@ const OUVRIR_AU_DEMARRAGE = false;
   });
 
 </script>
-
-  <div class="entete-fixe">
-    <div class="ti-1">
-      <font color="FFFFFF"><B>GRAMMAIRE DE GARDINER</B></font>
-    </div>
-    <font color="8D8C86" size="2" class="annee">
-      Ceci est un projet de version abrégée en français de la grammaire Gardiner. Les numéros de paragraphe
-      correspondent à ceux de l'ouvrage, en démarrant ici à la section 27.
-    </font>
-    <button type="button" class="btn-tout" onclick="toutOuvrir()">Ouvrir tout</button>
-    <button type="button" class="btn-tout" onclick="toutFermer()">Fermer tout</button>
-    &nbsp;<font size="2"> <a href="../index.html" class="l1">Retour</a></font>
-  </div>
-  <div class="entete-espace" id="entete-espace"></div>
-  <BR>
-  <button class="collapsible">
-    <div class="ti-2">
-      <font color="628BB1">§ 27. Phrases verbales</font>
-    </div>
-  </button>
-  <div class="content"><BR>
-    Ordre : verbe-sujet-objet-locution adverbiale<BR><BR>
-    <div style="display: flex; align-items: center; gap: 12px;">
-      <img src="svg/27.svg" alt="Description" style="height: 30px; width: auto;">
-      <span><span class="tra">wbn rˁ m pt</span> : Le soleil est dans le ciel</span><BR><BR>
-    </div>
-    <BR>
-  </div>
-
-  <button class="collapsible">
-    <div class="ti-2">
-      <font color="628BB1">§ 28. Phrases non-verbales</font>
-    </div>
-  </button>
-  <div class="content"><BR>
-    <div style="display: flex; align-items: center; gap: 12px;">
-      <img src="svg/28.svg" alt="Description" style="height: 30px; width: auto;">
-      <span><span class="tra">rˁ m pt</span> : Le soleil est dans le ciel</span><BR><BR>
-    </div>
-    <BR>Types :
-    <ul>
-      <li>à prédicat adverbial : « Le scribe est là »</li>
-      <li>à prédicat pronominal ou nominal : « Le scribe est un fripon »</li>
-      <li>à prédicat adjectival : « Le scribe est bon »</li>
-    </ul>
-    <BR>
-  </div>
-
-  <button class="collapsible">
-    <div class="ti-2">
-      <font color="628BB1">§ 28.1 Phrases non-verbales à prédicat adverbial</font>
-    </div>
-  </button>
-  <div class="content"><BR>
-    <div style="display: flex; align-items: center; gap: 12px;">
-      <img src="svg/29.svg" alt="Description" style="height: 30px; width: auto;">
-      <span><span class="tra">Rˁ jm </span> : Rê est là</span><BR><BR>
-    </div>
-    <BR>
-  </div>
-
 
 </body>
 
